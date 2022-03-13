@@ -21,6 +21,7 @@ We often use strings as identifiers for particular objects. For example, we can 
 In many use cases, we need to define variables with particular values based on the conditions, and we can simply use the if…else statement to check the condition. However, it requires several lines of code. If we’re only dealing with just the assignment of one variable, we may want to use the ternary expression, which checks the condition and completes the assignment with just one line of code. Besides, it has a shorter form, which makes the code even more concise. Consider the following example.
 
 ### With Statement For File Object
+
 We often need to read data from files and write data to files. The most common way is to simply open a file using the built-in open() function, which creates a file object that we can operate. Have you encountered the following problem before?
 
 In the preceding code snippet, we start with a text file, which has the text of “Hello World!” We then append some new data to the file. However, after a while, we want to work on the file again; the text file still has the old data when we read it. In other words, the appended texts are not included in the text file. Why can that happen?
