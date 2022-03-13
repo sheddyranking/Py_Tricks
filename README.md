@@ -14,3 +14,9 @@ However, it’s not the most Pythonic way. Instead, we can simply check the cont
 ### Create List of Strings With Split()
 
 We often use strings as identifiers for particular objects. For example, we can use strings for the keys in a dictionary. In a data science project, strings are often column names for the data. When we select multiple columns, we’ll inevitably need to create a list of strings. Indeed, we can create strings using literals in a list. However, we’ll have to write pairs of quotes to enclose each of the strings, which is kind of tedious for us “lazyish” people. Thus, I’d prefer to create a list of strings by taking advantage of the string’s `split()` method, as shown in the code snippet below.
+
+
+###  Ternary Expression
+
+In many use cases, we need to define variables with particular values based on the conditions, and we can simply use the if…else statement to check the condition. However, it requires several lines of code. If we’re only dealing with just the assignment of one variable, we may want to use the ternary expression, which checks the condition and completes the assignment with just one line of code. Besides, it has a shorter form, which makes the code even more concise. Consider the following example.
+
