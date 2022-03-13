@@ -26,10 +26,16 @@ if b in "Mon Wed Fri Sun".split():
 # The typical ways
 if a < 10 and b > 5 and c == 4:
     # do something
+    
 if a < 10 or b > 5 or c == 4:
     # do something
+
+
+## using all() and any() to solve the AND and OR logical operators problem.
+
 # Do these instead
 if all([a < 10, b > 5, c == 4]):
     # do something
+
 if any([a < 10, b > 5, c == 4]):
     # do something
