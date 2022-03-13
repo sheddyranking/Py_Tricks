@@ -53,3 +53,11 @@ The Counter class is available in the `collections`module. To use the class, we 
 Moreover, if you’re interested in finding out the most frequently occurring items of the word list, we can take advantage of the `most_common()` method of the Counter object. The following code shows you this usage. You just need to specify an integer (N), which will find out the most frequent N items from the list. As a side note, the `Counter` object will also work with other sequence data, such as strings and tuples.
 
 
+### Sorting With Different Order Requirements
+Sorting items in a list is a prevalent task in many projects. The most basic sorting is based on the numeric or alphabetic order, and we can use the built-in `sorted()` function. By default, the `sorted()` function will sort the list (actually, it can be any iterable) in the ascending order. If we specify the `reverse` argument to be `True`, we can get the items in the descending order. 
+
+Besides these basic usages, we can specify the `key` argument such that complicated items can be sorted, such as a list of tuples
+
+further more you can uses a trick of negative reverse order to sort combine elements. in this case `sort by name initial ascending, and by grades, descending`
+we set the value of grades to `-x[1]`, that is  `lambda x: x[0][0] -x[1]` for the combine.
+
