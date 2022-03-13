@@ -1,5 +1,5 @@
-
-
+# Py_Tricks
+Write Better Python Code With These Tricks
 ### Negative Indexing
 People like to work with sequences because we know the order of the elements, and we can operate these elements order-wise. In Python, strings, tuples, and lists are the most common sequence data types. We can access individual items using indexing. Like other mainstream programming languages, Python supports 0-based indexing, where we access the first element using zero within a pair of square brackets. Besides, we can also use slice objects to retrieve particular elements of the sequence, as shown in the code examples below.
 
@@ -13,3 +13,4 @@ However, it’s not the most Pythonic way. Instead, we can simply check the cont
 
 ### Create List of Strings With Split()
 We often use strings as identifiers for particular objects. For example, we can use strings for the keys in a dictionary. In a data science project, strings are often column names for the data. When we select multiple columns, we’ll inevitably need to create a list of strings. Indeed, we can create strings using literals in a list. However, we’ll have to write pairs of quotes to enclose each of the strings, which is kind of tedious for us “lazyish” people. Thus, I’d prefer to create a list of strings by taking advantage of the string’s `split()` method, as shown in the code snippet below.
+=======
