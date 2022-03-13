@@ -12,5 +12,5 @@ Containers refer to those container data types that can store other data. Some f
 However, it’s not the most Pythonic way. Instead, we can simply check the container itself, which will evaluate `True` when it contains elements. Although the following code shows you major container data types, such usage can also apply to strings too (i.e., any non-empty strings are `True`).
 
 ### Create List of Strings With Split()
+
 We often use strings as identifiers for particular objects. For example, we can use strings for the keys in a dictionary. In a data science project, strings are often column names for the data. When we select multiple columns, we’ll inevitably need to create a list of strings. Indeed, we can create strings using literals in a list. However, we’ll have to write pairs of quotes to enclose each of the strings, which is kind of tedious for us “lazyish” people. Thus, I’d prefer to create a list of strings by taking advantage of the string’s `split()` method, as shown in the code snippet below.
-=======
