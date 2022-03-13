@@ -42,3 +42,14 @@ In almost all Python projects, most of the code involves creating and calling fu
 One thing to note is that if you’re dealing with mutable data types (e.g., lists, sets) when you set the default value, make sure that you use `None` instead of the constructor (e.g., arg_name=[]). Because Python creates the function object where it’s defined, providing the empty list will be “stuck” with the function object. In other words, the function object won’t be created on the fly when you’re calling it. Instead, you’ll be dealing with the same function object, including its initially created default mutable object, in the memory, which may lead to unexpected behavior.
 
 
+## Use Counter for Element Counting
+
+When we have multiple items in a list, tuple, or string (e.g., multiple characters), we often want to count how many there are for each item. To do that, it’s possible to write some tedious code for this functionality.
+
+we first had to create a set that includes only unique words. We then iterated the word set and used the `count()` method to find out the occurrences of each word. However, there is a better way to do it — using the `Counter` class, which is designed to fulfill this counting task.
+
+The Counter class is available in the `collections`module. To use the class, we simply created a generator:` x.lower() for x in words`, and each of the items will be counted. As you can see, the Counter object is a dict-like mapping object with each key corresponding to the unique item of the word list, while the values are the counts for these items. Pretty concise, right?
+
+Moreover, if you’re interested in finding out the most frequently occurring items of the word list, we can take advantage of the `most_common()` method of the Counter object. The following code shows you this usage. You just need to specify an integer (N), which will find out the most frequent N items from the list. As a side note, the `Counter` object will also work with other sequence data, such as strings and tuples.
+
+
