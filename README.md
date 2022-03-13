@@ -26,3 +26,11 @@ We often need to read data from files and write data to files. The most common w
 
  we can explicitly call the `close()` method on the file object. However, we can do this using the `“with”` statement, which will close the file object for us automatically, as shown below. When we’re done with the operation with the file, we can verify that the file is closed by accessing the file object’s `closed `attribute.
 
+### Evaluate Multiple Conditions
+
+Oftentimes we need to evaluate multiple conditions. There are several possible scenarios. For numeric values, we can have multiple comparisons for the same variable. In this case, we can chain these comparisons.
+
+In some other scenarios, we can have multiple equality comparisons, and we can take advantage of the following technique using the in keyword for membership testing.
+
+Another technique is the use of the built-in `all()` and `any()` functions for evaluating multiple conditions. Specifically, the `all()` function will evaluate to be `True` when the elements in the iterable are all `True`, and thus this function is suitable to replace a series of `AND` logical comparisons. On the other hand, the `any()` function will evaluate to be `True` when any element in the iterable is `True`, and thus it’s suitable to replace a series of `OR` logical operations. Pertinent examples are shown below.
+
