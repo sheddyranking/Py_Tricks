@@ -34,3 +34,11 @@ In some other scenarios, we can have multiple equality comparisons, and we can t
 
 Another technique is the use of the built-in `all()` and `any()` functions for evaluating multiple conditions. Specifically, the `all()` function will evaluate to be `True` when the elements in the iterable are all `True`, and thus this function is suitable to replace a series of `AND` logical comparisons. On the other hand, the `any()` function will evaluate to be `True` when any element in the iterable is `True`, and thus it’s suitable to replace a series of `OR` logical operations. Pertinent examples are shown below.
 
+
+### Use Default Values in Function Declarations
+
+In almost all Python projects, most of the code involves creating and calling functions. In other words, we continuously deal with function declarations and refactorings. In many scenarios, we need to call a function multiple times. Depending on varied sets of parameters, the function will operate slightly differently. However, sometimes one set of parameters may be often used than others, in which case, we should consider setting default values when we declare the functions.
+
+One thing to note is that if you’re dealing with mutable data types (e.g., lists, sets) when you set the default value, make sure that you use `None` instead of the constructor (e.g., arg_name=[]). Because Python creates the function object where it’s defined, providing the empty list will be “stuck” with the function object. In other words, the function object won’t be created on the fly when you’re calling it. Instead, you’ll be dealing with the same function object, including its initially created default mutable object, in the memory, which may lead to unexpected behavior.
+
+
