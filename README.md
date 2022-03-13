@@ -24,6 +24,5 @@ In many use cases, we need to define variables with particular values based on t
 
 We often need to read data from files and write data to files. The most common way is to simply open a file using the built-in open() function, which creates a file object that we can operate. Have you encountered the following problem before?
 
-In the preceding code snippet, we start with a text file, which has the text of “Hello World!” We then append some new data to the file. However, after a while, we want to work on the file again; the text file still has the old data when we read it. In other words, the appended texts are not included in the text file. Why can that happen?
-It’s because we haven’t closed the file object in the first place. Without closing the file, the changes can’t be saved. Indeed, we can explicitly call the `close()` method on the file object. However, we can do this using the `“with”` statement, which will close the file object for us automatically, as shown below. When we’re done with the operation with the file, we can verify that the file is closed by accessing the file object’s `closed `attribute.
+ we can explicitly call the `close()` method on the file object. However, we can do this using the `“with”` statement, which will close the file object for us automatically, as shown below. When we’re done with the operation with the file, we can verify that the file is closed by accessing the file object’s `closed `attribute.
 
