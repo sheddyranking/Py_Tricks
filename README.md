@@ -61,3 +61,11 @@ Besides these basic usages, we can specify the `key` argument such that complica
 further more you can uses a trick of negative reverse order to sort combine elements. in this case `sort by name initial ascending, and by grades, descending`
 we set the value of grades to `-x[1]`, that is  `lambda x: x[0][0] -x[1]` for the combine.
 
+
+### defaultdict
+
+Dictionaries are a potent data type that allows us to store data in the form of key-value pairs. It’s required that all the keys are hashable such that under the hood, storing these data can involve the use of a hash table. Such implementation allows an O(1) efficiency for data retrieving and insertion. However, it should be noted that besides the `built-in dict` type, we have alternative dictionaries that we can use. Among them, I’d like to discuss the `defaultdict` type. Unlike the `built-in dict` type, the `defaultdict` allows us to set a default factory function that creates an element when the key doesn’t exist.
+
+Suppose that we’re dealing with words, and we want to group the same characters as a list, and these lists are associated with the characters being the keys. Here’s a naive implementation using the `built-in dict` type. Notably, it’s critical to check if the dict object has the `letter` key, because calling the `append()` method can raise a `KeyError` exception if the key doesn’t exist
+
+
